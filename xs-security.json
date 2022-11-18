@@ -1,0 +1,21 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.ReadProducts",
+      "description": "ReadProducts"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "ReadProducts",
+      "description": "",
+      "scope-references": [
+        "$XSAPPNAME.ReadProducts"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "xsappname": "BPWrapper",
+  "tenant-mode": "dedicated"
+}

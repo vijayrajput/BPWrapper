@@ -21,6 +21,11 @@ service BPWrapperService
             Price
         };
 
+    annotate MyProduct with @restrict :
+    [
+        { grant : [ 'READ' ], to : [ 'ReadProducts' ] }
+    ];
+
     entity CarrierCollection as
         projection on ZRMTSAMPLEFLIGHT.CarrierCollection
         {
@@ -33,6 +38,11 @@ service BPWrapperService
             carrierFlights,
             carrierFlights_FW
         };
+
+    annotate CarrierCollection with @restrict :
+    [
+        { grant : [ 'READ' ], to : [ 'ReadProducts' ] }
+    ];
 }
 
 annotate BPWrapperService with @requires :

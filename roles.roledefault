@@ -1,5 +1,13 @@
 [
 	{
+		"Name": "any",
+		"Description": "any",
+		"defaultPrivilege": {
+			"IsSimple": true,
+			"SimplePrivilege": 2
+		}
+	},
+	{
 		"Name": "authenticated-user",
 		"Description": "authenticated-user",
 		"defaultPrivilege": {
@@ -16,11 +24,18 @@
 		}
 	},
 	{
-		"Name": "any",
-		"Description": "any",
+		"Name": "ReadProducts",
+		"Description": "",
 		"defaultPrivilege": {
 			"IsSimple": true,
-			"SimplePrivilege": 2
+			"SimplePrivilege": 2,
+			"IndividualPrivilege": {
+				"READ": true,
+				"CREATE": false,
+				"UPDATE": false,
+				"DELETE": false,
+				"ALL": false
+			}
 		}
 	}
 ]

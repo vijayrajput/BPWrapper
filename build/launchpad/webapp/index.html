@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title> Project Preview </title>
+    <title> Application Overview </title>
     <script src="shared-config.js"></script>
     <script src="https://ui5.sap.com/1.104.2/resources/sap-ui-core.js" 
             id="sap-ui-bootstrap"
@@ -28,7 +28,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"BPWrapperService","DetailsURL":"./service/BPWrapper/","Metadata":"./service/BPWrapper/$metadata","Entities":[{"Name":"MyProduct","URL":"./service/BPWrapper/MyProduct","FioriURL":"$fiori-preview/BPWrapperService/MyProduct#preview-app"},{"Name":"CarrierCollection","URL":"./service/BPWrapper/CarrierCollection","FioriURL":"$fiori-preview/BPWrapperService/CarrierCollection#preview-app"}],"EntitiesCount":2}]}
+                            const data = {"Services":[{"ServiceName":"BPWrapperService","DetailsURL":"./service/BPWrapper/","Metadata":"./service/BPWrapper/$metadata","Entities":[{"Name":"MyProduct","URL":"./service/BPWrapper/MyProduct","FioriURL":""},{"Name":"CarrierCollection","URL":"./service/BPWrapper/CarrierCollection","FioriURL":""}],"EntitiesCount":2}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });
