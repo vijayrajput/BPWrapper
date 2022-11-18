@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm-install",
+      "type": "process",
+      "command": "npm",
+      "args": [
+        "install"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "npm-install-projectapi",
+      "type": "process",
+      "command": "npm",
+      "args": [
+        "install",
+        "@sap/artifact-management"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "BuildMDK",
+      "type": "process",
+      "command": "mdk",
+      "args": [
+        "build",
+        "--target",
+        "module",
+        "--recursive"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "dev-project",
+      "type": "process",
+      "command": "npx",
+      "args": [
+        "dev-project",
+        "run",
+        "${workspaceFolder}",
+        "--launchpad"
+      ],
+      "dependsOn": [
+        "npm-install",
+        "npm-install-projectapi",
+        "BuildMDK"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}
